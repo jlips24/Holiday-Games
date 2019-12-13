@@ -2,6 +2,8 @@
 # TODO: Create CSV import logic
 
 import random
+import csv
+
 
 def make_matches(people):
     for person in people:
@@ -12,9 +14,11 @@ def make_matches(people):
         people[match][3] = True
     return people
 
+
 def print_matches(people):
     for person in people:
         print(f"\n{person[0]} is {people[person[2]][0]}'s Santa!")
+
 
 def main_code_import():
     # [name, email, match, chosen]
@@ -31,7 +35,15 @@ def main_code_import():
     print_matches(people)
 
 
-def main():
+def main_csv_import():
+    # people = []
+    with open('/config/people.csv', 'rt') as f:
+        data = csv.reader(f)
+        for row in data:
+            print(row)
+
+
+def start():
     # Main menu
     import_type = input("\nWould you like to:\n\n1. import names from a CSV?\n2. Import names from code\n\n(Please type the number corresponding to your answer and then press enter)\n")
     while (import_type != '1') and (import_type != '2'):
@@ -40,10 +52,9 @@ def main():
     # Menu logic
     import_type = int(import_type)
     if (import_type == 1):
-        pass
+        main_csv_import()
     elif (import_type == 2):
         main_code_import()
 
-
 if __name__ == "__main__":
-    main()
+    start()
