@@ -36,5 +36,5 @@ This application runs in the command line. It supports Secret Santa and White El
     ```
     python3 main.py
     ```
-4. Use numbers to navigate the menu and choose your game.
+4. Use numbers to navigate the menu and choose your game
 5. Have everyone check their email and buy some gifts!
