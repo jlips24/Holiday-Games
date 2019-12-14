@@ -1,6 +1,7 @@
 # Project specific
 .DS_Store
 config/
+.env
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -21,6 +22,7 @@ parts/
 sdist/
 var/
 venv/
+.vscode/
 *.egg-info/
 .installed.cfg
 *.egg
