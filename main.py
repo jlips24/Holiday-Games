@@ -1,6 +1,3 @@
-# TODO: Update readme to reflect new menu
-# TODO: Setup email to participants
-
 from games.secret_santa.SecretSanta import SecretSanta
 
 
