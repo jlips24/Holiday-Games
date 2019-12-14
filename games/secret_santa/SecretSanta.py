@@ -23,11 +23,7 @@ class SecretSanta(object):
         print("\n")
 
 
-    def main_csv_import(self):
-        return csv_import("config/people.csv")
-
     def start(self):
-        people = self.main_csv_import()
+        people = csv_import("config/people.csv")
         people = self.make_matches(people)
-        send_emails(people)
-        
+        send_emails(people, "SecretSanta")
