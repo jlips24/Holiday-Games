@@ -34,7 +34,7 @@ This application runs in the command line. It supports Secret Santa and White El
 3. Execute the following command
     
     ```
-    python3 SecretSanta.py
+    python3 main.py
     ```
 4. Use numbers to navigate the menu and choose your game.
 5. Have everyone check their email and buy some gifts!
