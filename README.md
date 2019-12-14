@@ -19,7 +19,10 @@ My friends and I wanted to do a secret santa, but we don;t live close to each ot
     source venv/bin/activate
 
     pip3 install -r requirements.txt
+
+    cp .env.example .env
     ```
+- Fill in the environment variables in the .env file
 - You're ready to go!
 
 ## Usage

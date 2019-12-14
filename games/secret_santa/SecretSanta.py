@@ -30,3 +30,4 @@ class SecretSanta(object):
         people = self.main_csv_import()
         people = self.make_matches(people)
         send_emails(people)
+        

@@ -45,3 +45,4 @@ def send_emails(people):
         del msg
 
         message_number += 1
+        

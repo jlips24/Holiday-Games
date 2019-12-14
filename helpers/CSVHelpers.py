@@ -11,3 +11,4 @@ def csv_import(filename):
                 people.append(person)
             count += 1
     return people
+    
