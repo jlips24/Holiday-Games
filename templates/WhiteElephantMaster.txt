@@ -1,0 +1,10 @@
+Dear ${RECIPRIENT_NAME}, 
+
+You've been choosen as the most trustworthy person in your White Elephant part. Depending on your group, that may or may not be a big achievement. 
+Here's the master list of everybody who's playing, and their turn number. Don't show this to anybody. It's up to you to make sure everybody waits their turn.
+
+
+${PERSON_LIST}
+
+Yours Truly,
+Open Source Christmas

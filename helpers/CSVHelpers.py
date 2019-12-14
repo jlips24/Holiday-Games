@@ -7,8 +7,8 @@ def csv_import(filename):
         count = 0
         for row in data:
             if (count != 0):
+                # [name, email, match/number, chosen]
                 person = [row[0], row[1], -1, False]
                 people.append(person)
             count += 1
     return people
-    

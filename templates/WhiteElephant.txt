@@ -1,0 +1,7 @@
+Dear ${RECIPRIENT_NAME}, 
+
+Welcome to the party! The White Elephant party that is. You get to go on turn number ${TURN_NUMBER}. 
+It's up to you if you want to share that information with the others, or keep it to yourself and keep things interesting.
+
+Yours Truly,
+Open Source Christmas
