@@ -9,7 +9,7 @@
 
 My friends and I wanted to do a secret santa, but we don;t live close to each other, so we couldn't pull names out of a hat. I looked for an application to do this for us, but I dodn't trust any of them with our email addresses, so I built an open source secret santa application that you control.
 
-This application runs in the command line and supports Secret Santa and White Elephant.
+This application runs in the command line. It supports Secret Santa and White Elephant.
 
 ## Setup
 - Clone this repository on your local machine
