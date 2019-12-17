@@ -7,12 +7,14 @@ from helpers.EmailHelpers import send_emails
 class SecretSanta(object):
 
     def make_matches(self, people):
+        count = 0
         for person in people:
             match = random.randint(0, (len(people) - 1))
-            while (people[match] == person) or (people[match][3] == True):
+            while (people[match] == person) or (people[match][3] == True or (len(people) > 2 and people[match][2] == count)):
                 match = random.randint(0, (len(people) - 1))
             person[2] = match
             people[match][3] = True
+            count += 1
         return people
 
 
