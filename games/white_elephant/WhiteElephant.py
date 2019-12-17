@@ -31,7 +31,6 @@ class WhiteElephant(object):
 
         people = csv_import("config/people.csv")
         people = self.give_numbers(people)
-        print(people)
         send_emails(people, "WhiteElephant")
         send_emails([[game_master_name, game_master_email, 0, True]], "WhiteElephantMaster", extra=self.compile_master_list(people))
         
