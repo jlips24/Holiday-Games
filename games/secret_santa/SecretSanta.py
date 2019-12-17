@@ -9,7 +9,6 @@ class SecretSanta(object):
     def make_matches(self, people):
         for person in people:
             match = random.randint(0, (len(people) - 1))
-            print(people[match][3])
             while (people[match] == person) or (people[match][3] == True):
                 match = random.randint(0, (len(people) - 1))
             person[2] = match
