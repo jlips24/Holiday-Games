@@ -39,10 +39,6 @@ def send_emails(people, template, extra=None):
 
             # Add in the message body
             msg.attach(MIMEText(message, 'plain'))
-
-            # Send the message
-            s.send_message(msg)
-            del msg
         elif (template == "WhiteElephant"):
             message_template = read_template('templates/WhiteElephant.txt')
             # Add in the reciprient name and match name to the message template
@@ -53,9 +49,6 @@ def send_emails(people, template, extra=None):
             msg['Subject']="White Elephant info"
             # Add in the message body
             msg.attach(MIMEText(message, 'plain'))
-            # Send the message
-            s.send_message(msg)
-            del msg
         elif (template == "WhiteElephantMaster"):
             message_template = read_template('templates/WhiteElephantMaster.txt')
             # Add in the reciprient name and match name to the message template
@@ -65,8 +58,11 @@ def send_emails(people, template, extra=None):
             msg['Subject']="White Elephant info (master list)"
             # Add in the message body
             msg.attach(MIMEText(message, 'plain'))
-            # Send the message
+        # Send the message
+        try:
             s.send_message(msg)
-            del msg
+        except smtplib.SMTPRecipientsRefused:
+            print(f"The mail server had an error sending the notification to {msg['To']}")
+        del msg
 
         message_number += 1
