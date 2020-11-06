@@ -25,6 +25,8 @@ class SecretSanta(object):
 
 
     def start(self):
+        max_value = int(input("\nWhat is the maximum someone should spend on a gift?: $"))
+
         people = csv_import("config/people.csv")
         people = self.make_matches(people)
-        send_emails(people, "SecretSanta")
+        send_emails(people, "SecretSanta", extra=[max_value])
