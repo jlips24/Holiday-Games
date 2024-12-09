@@ -16,13 +16,15 @@ This application runs in the command line. It supports Secret Santa and White El
 - In terminal, navigate to the project directory
 - Run the following commands:
     ```
-    virtualenv venv
+    python3 -m venv venv
 
     source venv/bin/activate
 
     pip3 install -r requirements.txt
 
     cp .env.example .env
+
+    cp config/people.csv.example config/people.csv
     ```
 - Fill in the environment variables in the .env file
 - You're ready to go!
