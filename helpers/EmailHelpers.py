@@ -33,7 +33,7 @@ def send_emails(people, template, extra=None):
             # Add in the reciprient name and match name to the message template
             reciprient = person[0]
             match_name = people[person[2]][0]
-            message = message_template.substitute(RECIPRIENT_NAME=reciprient, MATCH_NAME=match_name, MAX_MONEY=extra[0])
+            message = message_template.substitute(RECIPRIENT_NAME=reciprient, MATCH_NAME=match_name, MAX_MONEY=extra[0], DEADLINE=extra[1])
             # Setup the parameters of the message
             msg['Subject']="Your Secret Santa match is ready"
 
