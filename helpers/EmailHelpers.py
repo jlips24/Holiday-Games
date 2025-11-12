@@ -15,6 +15,26 @@ def read_template(filename):
 
 def send_emails(people, template, extra=None):
     print("Sending Messages")
+    TEST_RUN = os.getenv("TEST_RUN", False)
+    if TEST_RUN in [True, 'True', 'true', '1', 1]:
+        print("TEST RUN ENABLED: No emails will be sent, only printed to console.")
+        for person in people:
+            print(f"Preparing message for {person[0]} at {person[1]}")
+            if (template == "SecretSanta"):
+                reciprient = person[0]
+                match_name = people[person[2]][0]
+                message = f"{reciprient} got {match_name}"
+                print(message)
+            elif (template == "WhiteElephant"):
+                reciprient = person[0]
+                turn = person[2]
+                message = f"{reciprient} got turn #{turn}"
+                print(message)
+            elif (template == "WhiteElephantMaster"):
+                reciprient = person[0]
+                print(f"\nMaster list for {reciprient}:")
+                print(extra)
+        return
 
     s = smtplib.SMTP(host=os.getenv("EMAIL_HOST"), port=int(os.getenv("EMAIL_PORT")))
     s.starttls()
